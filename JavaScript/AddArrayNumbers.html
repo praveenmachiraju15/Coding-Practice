@@ -1,0 +1,31 @@
+<html>
+<body>
+<script>
+function addNumbers(numbersToAdd){
+var sum=0;
+for(oneNumber in numbersToAdd){
+sum+=numbersToAdd[oneNumber];
+}
+return sum;
+}
+
+var myNumbers = [2,4,2,7];
+var myNumbers2 = [121,14,12,17];
+var myNumbers3 = [112,114,112,117];
+var myNumbers4 = [11112,111141,11112,11117];
+var sum1 = addNumbers(myNumbers);
+var sum2 = addNumbers(myNumbers2);
+var sum3 = addNumbers(myNumbers3);
+var sum4 = addNumbers(myNumbers4);
+
+document.write(sum1 +"<br>");
+document.write(sum2 +"<br>");
+document.write(sum3 +"<br>");
+document.write(sum4 +"<br>");
+
+
+
+
+</script>
+</body>
+</html>
