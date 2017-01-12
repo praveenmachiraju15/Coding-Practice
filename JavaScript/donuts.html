@@ -1,0 +1,50 @@
+<html>
+<head>
+<script type="text/javascript">
+function updateOrder(){
+
+var cakes = document.getElementById("1").value.parseInt();
+var donuts = document.getElementById("2").value.parseInt();
+window.alert(cakes);
+
+
+}
+
+</script>
+
+</head>
+
+<body>
+<form name="order" action="donut.php" method=post>
+<table><tr>
+<td>Name: <input type="text" name="order name"  required="required"> </td> </tr>
+<br>
+<tr>
+<td># of cakes: <input type="number" name="cakes" id="1" onblur=updateOrder()/></td>
+</tr>
+<br>
+<tr>
+<td># of Donuts: <input type="number" name="donuts" id="2" onblur=updateOrder() /></td>
+</tr>
+<br> <tr>
+<td>Mins to pick-up: <input type="number" name="time" id="3"/></td>
+</tr>
+<br>
+<tr>
+<td>subtotal:<input type="number" name="subtotal" id="4" /></td>
+</tr>
+<br>
+<tr>
+<td> tax:<input type="number" name="tax" id="5" /></td>
+</tr>
+<br>
+<tr>
+<td>TOTAL:<input type="decimal" name="total" id="6" />
+</table>	
+
+<input type="submit" onclick=submitForm()>
+</form>
+
+</body>
+
+</html>

@@ -1,0 +1,41 @@
+<html>
+<title>Adding after blur</title>
+<head>
+<script>
+function takeOne(){
+var a = parseInt(document.getElementById('1').value);
+alert(a);
+
+var b =  parseInt(document.getElementById('2').value);
+alert(b);
+
+alert(a+b);
+
+
+}
+</script>
+</head>
+<body>
+<p>
+<form name="sample">
+Number 1: <input type="number" name="num1" id=1 >
+
+<br>
+Number 1: <input type="number" name="num2" id=2 onblur=takeOne()>
+
+<br>
+
+</form>
+
+</p>
+
+<script>
+	
+document.write("<p>" +a+b+ "</p>");
+
+</script>
+</body>
+
+
+
+</html>
