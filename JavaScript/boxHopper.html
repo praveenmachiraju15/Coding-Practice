@@ -1,0 +1,17 @@
+<html>
+<body>
+	<input type="number" id="box1" autofocus="autofocus" onkeyup='checkInput(this.id)'> - <input type="number" id="box2"onkeyup='checkInput(this.id)'> - <input type="number" id="box3"> 
+	<input type="button" value="Reset" onclick='reset()'>
+	<script type="text/javascript">
+		function checkInput(id){
+			
+			if((document.getElementById(id).value.length) >= 3)
+				document.getElementById(id).nextElementSibling.focus();
+		}
+
+		function reload(){
+			location.reload(true);
+		}
+	</script>
+</body>
+</html>
