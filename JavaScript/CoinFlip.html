@@ -1,0 +1,29 @@
+<html>
+<title>Coin Flip Simulator</title>
+<body>
+<h1> Coin Flip Simulator </h1>
+<p style = "text-align: center;">
+ <ol type="1">
+<li>Click Start to begin</li>
+<li>Enter the number of times you want to flip the coin</li>
+</ol>
+<input type="button" name="submit" value="Begin" align="center" onclick='beginFlip()' />
+</p>
+<hr>
+<p id="result">
+<script>
+function beginFlip(){
+//document.getElementById("demo").innerHTML = 5 + 6;
+var flips=Number(prompt("Enter a number",""));
+for(var i=1;i<=flips;i++){
+var random_boolean = Math.random() >= 0.5;
+if(random_boolean == false)
+ var result="Heads!" 
+ else var result ="Tails!"
+document.getElementById("result").innerHTML+=("Result of Toss: "+i+" " + "<strong>"+result+"</strong>"+"<br>");
+}
+
+}
+</script>
+</body>
+</html>
