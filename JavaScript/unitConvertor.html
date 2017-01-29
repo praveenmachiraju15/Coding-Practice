@@ -1,5 +1,12 @@
 <html>
 <title>Unit Convertor</title>
+<!-- <style type="text/css">
+	input[type="button"] {
+		width: 120px;
+		margin-left: 35px;
+		display: inline-grid;
+	}
+</style> -->
 <body>
 	<script type="text/javascript">
 
@@ -47,11 +54,29 @@ depepding the radio button id, change the innerHTML of the dropdowns with apropr
 	<class>
 		<input type="number" id="number1" placeholder="input here ex: '0'" required="required" onkeyup="convert(document.getElementById('ddown1').value,document.getElementById('ddown2').value)"> <select id="ddown1" onchange="convert(document.getElementById('ddown1').value,document.getElementById('ddown2').value)""> </select>
 
+		<!-- The switch button -->
+		<input type="button" id="switchButton" name="switchButton" value="Switch Units" onclick="swap();"> 
+		<script type="text/javascript">
+			function swap(){
+
+				temp = document.getElementById('ddown1').value;
+				document.getElementById('ddown1').value = document.getElementById('ddown2').value;
+				document.getElementById('ddown2').value = temp
+
+				convert(document.getElementById('ddown1').value,document.getElementById('ddown2').value);
+			}
+		</script>
+
+
 		<input type="number" id="number2" readonly="readonly" placeholder="Result appears here"> <select id="ddown2" onchange="convert(document.getElementById('ddown1').value,document.getElementById('ddown2').value)""> </select>
 	</class>
+	<br>
+	<br>
+	<br>
+	<!-- <input type="text" name="rough" id="rough" style="resize: both;"> -->
 	<script type="text/javascript">
 		function convert(value1,value2){
-			
+
 			var enteredValue = parseFloat(document.getElementById('number1').value);
 			var result = document.getElementById('number2');
 			if(value1==="Meters" && value2==="Meters"){ //converting METERS TO METERS
